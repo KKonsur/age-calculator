@@ -17,4 +17,8 @@
    font-size: clamp(3.5rem,5vw,4.5rem);
    font-style: italic;
    font-weight: 800;
+
+   &__result {
+      color: $purple;
+   }
 }

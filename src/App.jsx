@@ -28,9 +28,30 @@ const App = () => {
       <div className={styles.app}>
          <DateForm onSetDate={setDateHandler} />
          <div className={styles.results}>
-            <p>{years !== null ? `${years} years` : '--years'}</p>
-            <p>{months !== null ? `${months} months` : '--months'}</p>
-            <p>{days !== null ? `${days} days` : '--days'}</p>
+            <p>
+               {years !== null ? (
+                  <span className={styles['results__result']}>{years}</span>
+               ) : (
+                  <span className={styles['results__result']}>--</span>
+               )}{' '}
+               years
+            </p>
+            <p>
+               {months !== null ? (
+                  <span className={styles['results__result']}>{months}</span>
+               ) : (
+                  <span className={styles['results__result']}>--</span>
+               )}{' '}
+               months
+            </p>
+            <p>
+               {days !== null ? (
+                  <span className={styles['results__result']}>{days}</span>
+               ) : (
+                  <span className={styles['results__result']}>--</span>
+               )}{' '}
+               days
+            </p>
          </div>
       </div>
    )
